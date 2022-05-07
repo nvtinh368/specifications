@@ -1,0 +1,19 @@
+{
+  "name": "@unblocked/emulator-spec",
+  "version": "2.0.0-alpha.1",
+  "description": "Interfaces to interact with Unblocked emulator plugins",
+  "repository": "git@github.com:unblocked/emulator-spec.git",
+  "author": "Data Liberation Foundation",
+  "contributors": ["Caleb Clark", "Blake Byrnes"],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unblocked/emulator-spec/issues"
+  },
+  "homepage": "https://ulixee.org/ubbb",
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "dependencies": {
+    "devtools-protocol": "^0.0.981744"
+  }
+}

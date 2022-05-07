@@ -1,0 +1,35 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true,
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "esModuleInterop": false,
+    "declaration": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strictBindCallApply": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "skipDefaultLibCheck": true,
+    "downlevelIteration": true,
+    "rootDir": ".",
+    "outDir": "./build",
+    "preserveSymlinks": false,
+    "experimentalDecorators": true
+  },
+  "include": ["*.ts", "*.json", ".eslintrc.js"],
+  "exclude": [
+    "**/tsconfig*.json",
+    "build",
+    "build-dist",
+    "node_modules",
+    "**/node_modules",
+    "docs",
+    "**/*.d.ts"
+  ]
+}
