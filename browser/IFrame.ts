@@ -2,11 +2,11 @@ import type ITypedEventEmitter from '@ulixee/commons/interfaces/ITypedEventEmitt
 import IPoint from './IPoint';
 import { NavigationReason } from './NavigationReason';
 import IJsPathFunctions from './IJsPathFunctions';
-import { IInteractionGroups } from './IInteractions';
-import { IInteractHooks } from './IHooks';
+import IInteractHooks from '../hooks/IInteractHooks';
 import { IFrameNavigations } from './IFrameNavigations';
 import { ILoadStatus } from './Location';
 import INavigation from './INavigation';
+import { IInteractionGroups } from '../interact/IInteractions';
 
 export interface IFrame extends ITypedEventEmitter<IFrameEvents> {
   frameId: number; // assigned id unique to the browser context

@@ -1,8 +1,8 @@
 import IBrowserContext from './IBrowserContext';
 import IBrowserEngine from './IBrowserEngine';
-import { IBrowserHooks } from './IHooks';
 import type ITypedEventEmitter from '@ulixee/commons/interfaces/ITypedEventEmitter';
 import IDevtoolsSession from './IDevtoolsSession';
+import IBrowserHooks from "../hooks/IBrowserHooks";
 
 export default interface IBrowser extends ITypedEventEmitter<IBrowserEvents> {
   id: string;

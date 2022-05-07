@@ -1,7 +1,7 @@
-import IDeviceProfile from './IDeviceProfile';
+import IDeviceProfile from './browser/IDeviceProfile';
 import { EmulatorTypes } from './IEmulatorTypes';
-import { IInteractHooks } from './IHooks';
 import ILogger from './ILogger';
+import IInteractHooks from "./hooks/IInteractHooks";
 
 export interface IHumanEmulator extends IHumanEmulatorMethods {
   id: string;

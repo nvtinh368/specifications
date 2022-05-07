@@ -1,8 +1,8 @@
-import { IJsPath } from './IJsPath';
-import { IKeyboardKeyCode } from './IKeyboardLayoutUS';
 import IMouseResult from './IMouseResult';
-import IPoint from './IPoint';
-import { IKeyboardShortcut } from './IKeyboardShortcuts';
+import { IJsPath } from '@unblocked-web/js-path';
+import IPoint from '../browser/IPoint';
+import {IKeyboardShortcut} from "./IKeyboardShortcuts";
+import {IKeyboardKeyCode} from "./IKeyboardLayoutUS";
 
 export type IElementInteractVerification = 'elementAtPath' | 'exactElement' | 'none';
 

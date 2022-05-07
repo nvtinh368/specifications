@@ -1,4 +1,4 @@
-import { INodeVisibility } from './INodeVisibility';
+import { INodeVisibility } from '@unblocked-web/js-path';
 
 export default interface IMouseResult {
   pageX: number;

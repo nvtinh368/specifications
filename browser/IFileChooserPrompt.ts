@@ -1,4 +1,4 @@
-import { IJsPath } from './IJsPath';
+import { IJsPath } from '@unblocked-web/js-path';
 
 export default interface IFileChooserPrompt {
   frameId: number;

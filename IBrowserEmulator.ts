@@ -1,11 +1,12 @@
-import IBrowserEngine from './IBrowserEngine';
-import { IBrowserContextHooks, IBrowserHooks, INetworkHooks } from './IHooks';
-import IUserAgentOption, { IVersion } from './IUserAgentOption';
-import IDeviceProfile from './IDeviceProfile';
-import ILogger from './ILogger';
-import IViewport from './IViewport';
-import IGeolocation from './IGeolocation';
 import { EmulatorTypes } from './IEmulatorTypes';
+import IUserAgentOption, { IVersion } from './browser/IUserAgentOption';
+import IDeviceProfile from './browser/IDeviceProfile';
+import ILogger from './ILogger';
+import IBrowserEngine from './browser/IBrowserEngine';
+import IBrowserHooks, { IBrowserContextHooks } from './hooks/IBrowserHooks';
+import INetworkHooks from './hooks/INetworkHooks';
+import IViewport from './browser/IViewport';
+import IGeolocation from './browser/IGeolocation';
 
 export interface IBrowserEmulator extends IBrowserEmulatorMethods {
   id: string;

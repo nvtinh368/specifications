@@ -1,4 +1,4 @@
-import IHttpResourceLoadDetails from './IHttpResourceLoadDetails';
+import IHttpResourceLoadDetails from '../net/IHttpResourceLoadDetails';
 
 export declare type IBrowserResourceRequest = Omit<
   IHttpResourceLoadDetails,

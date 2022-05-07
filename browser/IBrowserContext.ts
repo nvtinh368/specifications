@@ -1,10 +1,11 @@
 import { URL } from 'url';
 import type ITypedEventEmitter from '@ulixee/commons/interfaces/ITypedEventEmitter';
-import { ICookie } from './ICookie';
 import { IPage } from './IPage';
 import { IWorker } from './IWorker';
 import IBrowser from './IBrowser';
-import { IBrowserContextHooks, IInteractHooks } from './IHooks';
+import { IBrowserContextHooks } from '../hooks/IBrowserHooks';
+import { ICookie } from '../net/ICookie';
+import IInteractHooks from "../hooks/IInteractHooks";
 
 export default interface IBrowserContext extends ITypedEventEmitter<IBrowserContextEvents> {
   id: string;

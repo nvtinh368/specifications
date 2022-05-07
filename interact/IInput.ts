@@ -1,6 +1,6 @@
 import { IKeyboardKey } from './IKeyboardLayoutUS';
 import { IMouseButton } from './IInteractions';
-import IPoint from './IPoint';
+import IPoint from '../browser/IPoint';
 
 export interface IKeyboard {
   up(key: IKeyboardKey): Promise<void>;

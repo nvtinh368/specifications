@@ -1,8 +1,7 @@
 import IExecJsPathResult from './IExecJsPathResult';
-import IPoint from './IPoint';
-import IElementRect from './IElementRect';
-import INodePointer from './INodePointer';
-import { IJsPath } from './IJsPath';
+import { IElementRect, IJsPath, INodePointer } from '@unblocked-web/js-path';
+
+import IPoint from '../browser/IPoint';
 
 const getNodePointerFnName = '__getNodePointer__';
 const getClientRectFnName = '__getClientRect__';

@@ -1,31 +1,38 @@
 {
-  "name": "@unblocked/emulator-spec",
+  "name": "@unblocked-web/emulator-spec",
+  "private": true,
   "version": "2.0.0-alpha.1",
   "description": "Interfaces to interact with Unblocked emulator plugins",
   "scripts": {
     "prepare": "husky install",
-    "build": "yarn tsc && shx cp package.build.json build/package.json && cd ./build && yarn",
+    "build": "pwd && yarn tsc && shx cp package.build.json build/package.json && cd ./build && yarn install -focus",
     "build:dist": "shx rm -rf build-dist && tsc -b tsconfig.dist.json && yarn copy:dist",
     "tsc": "tsc -b -i tsconfig.json",
     "watch": "tsc -b -i -w tsconfig.json",
     "lint": "eslint --cache ./"
   },
-  "repository": "git@github.com:unblocked/emulator-spec.git",
-  "author": "Data Liberation Foundation",
+  "repository": "git@github.com:unblocked-web/emulator-spec.git",
+  "author": "Ulixee",
   "contributors": [
     "Caleb Clark",
     "Blake Byrnes"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/unblocked/emulator-spec/issues"
+    "url": "https://github.com/unblocked-web/emulator-spec/issues"
   },
   "homepage": "https://ulixee.org/unblocked",
   "engines": {
     "node": ">=14.17.0"
   },
+  "workspaces": {
+    "packages": [
+      "../js-path/build"
+    ]
+  },
   "dependencies": {
-    "devtools-protocol": "^0.0.981744"
+    "devtools-protocol": "^0.0.981744",
+    "@unblocked-web/js-path": "2.0.0-alpha.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
