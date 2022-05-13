@@ -1,8 +1,8 @@
 {
-  "name": "@unblocked-web/emulator-spec",
+  "name": "@unblocked-web/specifications",
   "private": true,
   "version": "2.0.0-alpha.1",
-  "description": "Interfaces to interact with Unblocked emulator plugins",
+  "description": "Interfaces to interact with Unblocked Agent Plugins",
   "scripts": {
     "prepare": "husky install",
     "build": "pwd && yarn tsc && shx cp package.build.json build/package.json && cd ./build && yarn install -focus",
@@ -11,7 +11,7 @@
     "watch": "tsc -b -i -w tsconfig.json",
     "lint": "eslint --cache ./"
   },
-  "repository": "git@github.com:unblocked-web/emulator-spec.git",
+  "repository": "git@github.com:unblocked-web/specifications.git",
   "author": "Ulixee",
   "contributors": [
     "Caleb Clark",
@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/unblocked-web/emulator-spec/issues"
+    "url": "https://github.com/unblocked-web/specifications/issues"
   },
   "homepage": "https://ulixee.org/unblocked",
   "engines": {

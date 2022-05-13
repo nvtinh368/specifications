@@ -22,7 +22,7 @@
     "preserveSymlinks": false,
     "experimentalDecorators": true
   },
-  "include": ["*.ts", "*/*.ts", "*.json", ".eslintrc.js"],
+  "include": ["*.ts", "**/*.ts", "*.json", ".eslintrc.js"],
   "exclude": [
     "**/tsconfig*.json",
     "build",

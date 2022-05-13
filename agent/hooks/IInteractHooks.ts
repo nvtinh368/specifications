@@ -9,11 +9,5 @@ export default interface IInteractHooks {
     helper?: IInteractionsHelper,
   ): Promise<void>;
 
-  beforeEachInteractionStep?(
-    interactionStep: IInteractionStep,
-    isMouseCommand: boolean,
-  ): Promise<void> | void;
-  afterInteractionGroups?(): Promise<void> | void;
-
   adjustStartingMousePoint?(point: IPoint, helper?: IInteractionsHelper): Promise<void> | void;
 }

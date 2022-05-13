@@ -1,13 +1,13 @@
 {
-  "name": "@unblocked-web/emulator-spec",
+  "name": "@unblocked-web/specifications",
   "version": "2.0.0-alpha.1",
-  "description": "Interfaces to interact with Unblocked emulator plugins",
-  "repository": "git@github.com:unblocked-web/emulator-spec.git",
+  "description": "Interfaces to interact with Unblocked Agent Plugins",
+  "repository": "git@github.com:unblocked-web/specifications.git",
   "author": "Ulixee",
   "contributors": ["Caleb Clark", "Blake Byrnes"],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/unblocked-web/emulator-spec/issues"
+    "url": "https://github.com/unblocked-web/specifications/issues"
   },
   "homepage": "https://ulixee.org/unblocked",
   "engines": {

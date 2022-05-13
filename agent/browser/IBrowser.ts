@@ -2,7 +2,7 @@ import IBrowserContext from './IBrowserContext';
 import IBrowserEngine from './IBrowserEngine';
 import type ITypedEventEmitter from '@ulixee/commons/interfaces/ITypedEventEmitter';
 import IDevtoolsSession from './IDevtoolsSession';
-import IBrowserHooks from "../hooks/IBrowserHooks";
+import IBrowserHooks from '../hooks/IBrowserHooks';
 
 export default interface IBrowser extends ITypedEventEmitter<IBrowserEvents> {
   id: string;
@@ -12,10 +12,11 @@ export default interface IBrowser extends ITypedEventEmitter<IBrowserEvents> {
   engine: IBrowserEngine;
   devtoolsSession: IDevtoolsSession;
   browserContextsById: Map<string, IBrowserContext>;
+  hooks: IBrowserHooks;
   close(): Promise<void | Error>;
-  hook(hooks: IBrowserHooks): void;
 }
 
 export interface IBrowserEvents {
   close: void;
+  'new-context': { context: IBrowserContext };
 }

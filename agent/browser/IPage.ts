@@ -60,6 +60,6 @@ export interface IPageEvents extends IFrameManagerEvents, IBrowserNetworkEvents 
   'dialog-opening': { dialog: IDialog };
   filechooser: { prompt: IFileChooserPrompt };
   'page-error': { frameId: string; error: Error };
-  'page-callback-triggered': { name: string; frameId: string; payload: any };
+  'page-callback-triggered': { name: string; frameId: string; payload: string };
   screenshot: { imageBase64: string; timestamp: number };
 }

@@ -2,7 +2,6 @@ import type ITypedEventEmitter from '@ulixee/commons/interfaces/ITypedEventEmitt
 import IPoint from './IPoint';
 import { NavigationReason } from './NavigationReason';
 import IJsPathFunctions from './IJsPathFunctions';
-import IInteractHooks from '../hooks/IInteractHooks';
 import { IFrameNavigations } from './IFrameNavigations';
 import { ILoadStatus } from './Location';
 import INavigation from './INavigation';
@@ -60,8 +59,6 @@ export interface IFrame extends ITypedEventEmitter<IFrameEvents> {
 
   getContainerOffset(): Promise<IPoint>;
   outerHTML(): Promise<string>;
-
-  hook(hooks: IInteractHooks): void;
 
   setFileInputFiles(nodePointerId: number, filePaths: string[]): Promise<void>;
   toJSON(): object;

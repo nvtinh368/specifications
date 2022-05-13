@@ -15,7 +15,7 @@ export default interface IBrowserContext extends ITypedEventEmitter<IBrowserCont
   pagesById: Map<string, IPage>;
   workersById: Map<string, IWorker>;
   defaultPageInitializationFn: (page: IPage) => Promise<any>;
-  hooks: (IBrowserContextHooks | IInteractHooks)[];
+  hooks: (IBrowserContextHooks & IInteractHooks);
 
   newPage(): Promise<IPage>;
   close(): Promise<void>;
@@ -25,8 +25,6 @@ export default interface IBrowserContext extends ITypedEventEmitter<IBrowserCont
     cookies: (Omit<ICookie, 'expires'> & { expires?: string | Date | number })[],
     origins?: string[],
   ): Promise<void>;
-
-  hook(hooks: IBrowserContextHooks | IInteractHooks): void;
 }
 
 export interface IBrowserContextEvents {
