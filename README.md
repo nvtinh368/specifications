@@ -61,10 +61,10 @@ Configurations include:
 
 ### Plugin Creation
 
-An individual plugin should implement the specification defined at [IAgentPlugin](./plugin/IAgentPlugin.ts). Any desired hooks should be added as functions to a class.
+An individual plugin should implement the specification defined at [IUnblockedPlugin](./plugin/IUnblockedPlugin.ts). Any desired hooks should be added as functions to a class.
 
 ```ts
-class MyFirstPlugin implements IAgentPlugin {
+class MyFirstPlugin implements IUnblockedPlugin {
   async onNewPage(page) {
     // do something
   }
@@ -74,7 +74,7 @@ class MyFirstPlugin implements IAgentPlugin {
 A plugin can optionally participate in a scrape and set Emulation Profile attributes by adding a static class function called `shouldActivate`.
 
 ```ts
-class MyFirstPlugin implements IAgentPlugin {
+class MyFirstPlugin implements IUnblockedPlugin {
   static shouldActivate(profile: IEmulationProfile): boolean {
     // 1. A plugin can set properties.
     if (!profile.browserEngine) profile.browserEngine = getMySuperEngine();
@@ -93,7 +93,7 @@ Plugins are created with an agent and thrown away when the Agent is closed.
 
 ### Plugin Coordination
 
-One or more Plugins are added to a single [`IAgentPlugins`](./plugin/IAgentPlugin.ts) manager that will be expected to follow a short specification. An implementor will need to be able to call a class level `shouldActivate` function on each Plugin class.
+One or more Plugins are added to a single [`IUnblockedPlugins`](./plugin/IUnblockedPlugin.ts) manager that will be expected to follow a short specification. An implementor will need to be able to call a class level `shouldActivate` function on each Plugin class.
 
 1. Each registered Plugin with a static method called `shouldActivate` must be called in the order Plugins are registered. The same [EmulationProfile](./plugin/IEmulationProfile.ts) object must be passed into each call. If a Plugin responds with `false`, it should not be used for the given session. If no method exists, it should always be activated.
 2. An instance of each participating Plugin will be constructed with the [EmulationProfile](./plugin/IEmulationProfile.ts) object.
