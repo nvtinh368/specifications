@@ -47,7 +47,7 @@ export interface IPage extends ITypedEventEmitter<IPageEvents> {
   removeDocumentScript(identifier: string): Promise<void>;
   addPageCallback(
     name: string,
-    onCallback?: (payload: any, frameId: string) => any,
+    onCallback?: (payload: string, frame: IFrame) => any,
     isolateFromWebPageEnvironment?: boolean,
   ): Promise<IRegisteredEventListener>;
 }
@@ -56,10 +56,10 @@ export interface IPageEvents extends IFrameManagerEvents, IBrowserNetworkEvents 
   close: void;
   worker: { worker: IWorker };
   crashed: { error: Error; fatal?: boolean };
-  console: { frameId: string; type: string; message: string; location: string };
+  console: { frameId: number; type: string; message: string; location: string };
   'dialog-opening': { dialog: IDialog };
   filechooser: { prompt: IFileChooserPrompt };
-  'page-error': { frameId: string; error: Error };
-  'page-callback-triggered': { name: string; frameId: string; payload: string };
+  'page-error': { frameId: number; error: Error };
+  'page-callback-triggered': { name: string; frameId: number; payload: string };
   screenshot: { imageBase64: string; timestamp: number };
 }

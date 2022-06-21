@@ -6,11 +6,13 @@ import { IFrameNavigations } from './IFrameNavigations';
 import { ILoadStatus } from './Location';
 import INavigation from './INavigation';
 import { IInteractionGroups } from '../interact/IInteractions';
+import { IPage } from './IPage';
 
 export interface IFrame extends ITypedEventEmitter<IFrameEvents> {
   frameId: number; // assigned id unique to the browser context
 
   id: string;
+  page?: IPage;
   parentId?: string;
   name?: string;
   url: string;
