@@ -9,6 +9,7 @@ import IBrowserLaunchArgs from '../agent/browser/IBrowserLaunchArgs';
 export default interface IEmulationProfile<T = any> {
   logger?: IBoundLog;
   userAgentOption?: IUserAgentOption;
+  windowNavigatorPlatform?: string;
   deviceProfile?: IDeviceProfile;
   browserEngine?: IBrowserEngine;
   options?: IEmulationOptions;

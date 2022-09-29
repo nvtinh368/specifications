@@ -1,6 +1,9 @@
 export default interface IBrowserEngineOption {
   id: string;
   name: string;
-  fullVersion: string;
+  majorVersion: number;
+  buildVersion: number;
+  stablePatchesByOs: { mac: number[]; win: number[]; linux: number[] };
   features: string[];
+  bypass?: boolean;
 }

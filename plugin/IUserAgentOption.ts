@@ -1,11 +1,9 @@
 export default interface IUserAgentOption {
   browserName: string;
   browserVersion: IVersion;
-
   operatingSystemName: string;
   operatingSystemVersion: IVersion;
-  operatingSystemPlatform: string;
-
+  uaClientHintsPlatformVersion: string;
   string: string;
 }
 
